@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextFieldView" customModule="MUSwiftFramework" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="clearBackground" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="appendErrorContainer" destination="6NH-ms-tub" id="dDj-YS-4BK"/>
+                <outlet property="bottomLabel" destination="Ksa-4a-WaS" id="9BC-cg-xun"/>
+                <outlet property="button" destination="3Ba-sw-9Jb" id="EO1-IZ-hNa"/>
+                <outlet property="errorContainer" destination="R0c-p9-vew" id="0NU-3X-6BY"/>
+                <outlet property="errorLabel" destination="2NG-aX-xxk" id="9TZ-DB-1dE"/>
+                <outlet property="placeholderLabel" destination="SPa-Zi-Emb" id="IbS-eX-ENE"/>
+                <outlet property="textfieldContainer" destination="1QD-ni-3fV" id="rQx-dS-Lf8"/>
+                <outlet property="topPlaceholderLabel" destination="NhS-vo-WRz" id="ZNT-Nz-0va"/>
+                <outlet property="unitsLabel" destination="BZj-LQ-V3Y" id="2vG-Ij-1ce"/>
+                <outlet property="unitsLeadingConstraint" destination="qca-g1-HY1" id="QLc-R3-Rrl"/>
+                <outlet property="valueTextFieldLeadingConstraint" destination="6bq-FH-Bxo" id="9qz-9Z-qr3"/>
+                <outlet property="valueTextfield" destination="bS3-Ec-Ynf" id="RDp-cg-NLG"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="138"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NhS-vo-WRz" userLabel="Top Placeholder Label (hidden)" customClass="Label" customModule="MUSwiftFramework" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="67" height="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1QD-ni-3fV" customClass="View" customModule="MUSwiftFramework" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="19" width="375" height="48"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placeholder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPa-Zi-Emb" customClass="Label" customModule="MUSwiftFramework" customModuleProvider="target">
+                            <rect key="frame" x="15" y="14.5" width="345" height="19"/>
+                            <gestureRecognizers/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bS3-Ec-Ynf" userLabel="Value Textfield (hidden)" customClass="TextField" customModule="MUSwiftFramework" customModuleProvider="target">
+                            <rect key="frame" x="15" y="14" width="345" height="20"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" smartDashesType="no"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="textfieldChanged:" destination="-1" eventType="editingChanged" id="gSk-aO-Awo"/>
+                                <outlet property="delegate" destination="-1" id="2gD-qI-jr1"/>
+                            </connections>
+                        </textField>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ba-sw-9Jb" customClass="Button" customModule="MUSwiftFramework" customModuleProvider="target">
+                            <rect key="frame" x="327" y="0.0" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="3Ba-sw-9Jb" secondAttribute="height" multiplier="1:1" id="L1x-EQ-C6u"/>
+                            </constraints>
+                            <state key="normal" image="wallet_icon_address"/>
+                            <connections>
+                                <action selector="buttonTap:" destination="-1" eventType="touchUpInside" id="eU6-UW-iZO"/>
+                            </connections>
+                        </button>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZj-LQ-V3Y" customClass="Label" customModule="MUSwiftFramework" customModuleProvider="target">
+                            <rect key="frame" x="110" y="14.5" width="10.5" height="19"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.97580295138888884" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="bS3-Ec-Ynf" firstAttribute="leading" secondItem="1QD-ni-3fV" secondAttribute="leading" constant="15" id="6bq-FH-Bxo"/>
+                        <constraint firstItem="SPa-Zi-Emb" firstAttribute="centerY" secondItem="1QD-ni-3fV" secondAttribute="centerY" id="ESx-MH-3N2"/>
+                        <constraint firstAttribute="height" constant="48" id="Mh7-9s-oGG"/>
+                        <constraint firstAttribute="trailing" secondItem="bS3-Ec-Ynf" secondAttribute="trailing" constant="15" id="TwX-eM-3aX"/>
+                        <constraint firstAttribute="trailing" secondItem="SPa-Zi-Emb" secondAttribute="trailing" constant="15" id="Xfk-EQ-XDf"/>
+                        <constraint firstItem="3Ba-sw-9Jb" firstAttribute="centerY" secondItem="1QD-ni-3fV" secondAttribute="centerY" id="Zqx-yP-tHz"/>
+                        <constraint firstItem="SPa-Zi-Emb" firstAttribute="leading" secondItem="1QD-ni-3fV" secondAttribute="leading" constant="15" id="dYr-ng-ee6"/>
+                        <constraint firstAttribute="trailing" secondItem="3Ba-sw-9Jb" secondAttribute="trailing" id="iMC-9P-nVK"/>
+                        <constraint firstItem="3Ba-sw-9Jb" firstAttribute="height" secondItem="1QD-ni-3fV" secondAttribute="height" id="lxE-VQ-ubM"/>
+                        <constraint firstItem="BZj-LQ-V3Y" firstAttribute="centerY" secondItem="bS3-Ec-Ynf" secondAttribute="centerY" id="moH-EV-l7Q"/>
+                        <constraint firstItem="BZj-LQ-V3Y" firstAttribute="leading" secondItem="1QD-ni-3fV" secondAttribute="leading" constant="110" id="qca-g1-HY1"/>
+                        <constraint firstItem="bS3-Ec-Ynf" firstAttribute="centerY" secondItem="1QD-ni-3fV" secondAttribute="centerY" id="vZk-Su-rQ7"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="15"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="7pD-w1-ajg" appends="YES" id="04t-I2-koa"/>
+                    </connections>
+                </view>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please use only letters, numbers the Latin alphabet and the underscore character." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ksa-4a-WaS" customClass="Label" customModule="MUSwiftFramework" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="75" width="375" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R0c-p9-vew" customClass="View" customModule="MUSwiftFramework" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="76" width="175.5" height="37"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6NH-ms-tub" customClass="View" customModule="MUSwiftFramework" customModuleProvider="target">
+                            <rect key="frame" x="13" y="-6" width="13" height="13"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.97884114583333337" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="rotate">
+                                    <real key="value" value="45"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="752" verticalHuggingPriority="251" text="Please use only letters" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NG-aX-xxk" customClass="Label" customModule="MUSwiftFramework" customModuleProvider="target">
+                            <rect key="frame" x="15" y="10" width="145.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.99607999999999997" green="0.15686" blue="0.15686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.97884114583333337" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="2NG-aX-xxk" firstAttribute="leading" secondItem="R0c-p9-vew" secondAttribute="leading" constant="15" id="ARU-MJ-Z55"/>
+                        <constraint firstAttribute="bottom" secondItem="2NG-aX-xxk" secondAttribute="bottom" constant="10" id="X0E-GI-BMC"/>
+                        <constraint firstItem="2NG-aX-xxk" firstAttribute="top" secondItem="R0c-p9-vew" secondAttribute="top" constant="10" id="Yzc-o6-tax"/>
+                        <constraint firstAttribute="trailing" secondItem="2NG-aX-xxk" secondAttribute="trailing" constant="15" id="eKA-zv-aNi"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Ksa-4a-WaS" secondAttribute="trailing" id="0ZF-wp-Pq1"/>
+                <constraint firstItem="NhS-vo-WRz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Eo-MM-h3F"/>
+                <constraint firstItem="R0c-p9-vew" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BXU-bi-aJc"/>
+                <constraint firstItem="1QD-ni-3fV" firstAttribute="top" secondItem="NhS-vo-WRz" secondAttribute="bottom" constant="5" id="Gjt-ko-BkE"/>
+                <constraint firstItem="NhS-vo-WRz" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="TCJ-wI-jbq"/>
+                <constraint firstAttribute="trailing" secondItem="1QD-ni-3fV" secondAttribute="trailing" id="UkI-4c-hnT"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="R0c-p9-vew" secondAttribute="trailing" constant="25" id="VzW-bZ-D1k"/>
+                <constraint firstItem="R0c-p9-vew" firstAttribute="top" secondItem="1QD-ni-3fV" secondAttribute="bottom" constant="9" id="WGN-bf-Jp6"/>
+                <constraint firstItem="Ksa-4a-WaS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cG8-b3-qvC"/>
+                <constraint firstItem="Ksa-4a-WaS" firstAttribute="top" secondItem="1QD-ni-3fV" secondAttribute="bottom" constant="8" id="era-yJ-8u7"/>
+                <constraint firstItem="1QD-ni-3fV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="m3G-9Q-8Z3"/>
+                <constraint firstAttribute="trailing" secondItem="R0c-p9-vew" secondAttribute="trailing" priority="751" constant="25" id="uzS-xa-C5h"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="24.5" y="70"/>
+        </view>
+        <tapGestureRecognizer id="7pD-w1-ajg">
+            <connections>
+                <action selector="textfieldContainerTap:" destination="-1" id="SmE-CL-GUR"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="wallet_icon_address" width="19" height="18"/>
+    </resources>
+</document>

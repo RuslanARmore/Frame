@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delegate-->
+        <scene sceneID="0pF-Pr-YM5">
+            <objects>
+                <viewController storyboardIdentifier="DemoQrController" id="d1d-0t-P1k" customClass="DemoQrController" customModule="MUSwiftFramework" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hes-6w-oWY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qIl-Mg-UX8">
+                                <rect key="frame" x="103.66666666666669" y="85.666666666666686" width="207" height="207"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qIl-Mg-UX8" secondAttribute="height" multiplier="1:1" id="VBT-ro-Vtc"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yyS-Mt-US2" customClass="TextFieldView" customModule="MUSwiftFramework" customModuleProvider="target">
+                                <rect key="frame" x="16" y="322.66666666666669" width="382" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="1i8-WZ-2AX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isError" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isEditing" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isEmpty" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isEnabled" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Type text here"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="d1d-0t-P1k" id="WD1-5F-xxZ"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53r-Gh-Ygi" customClass="Button" customModule="MUSwiftFramework" customModuleProvider="target">
+                                <rect key="frame" x="121" y="422.66666666666669" width="172" height="30"/>
+                                <state key="normal" title="Generate QR code image"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMd-BO-aWD" customClass="Button" customModule="MUSwiftFramework" customModuleProvider="target">
+                                <rect key="frame" x="158" y="472.66666666666669" width="98" height="30"/>
+                                <state key="normal" title="Scan QR code"/>
+                                <connections>
+                                    <action selector="scanQrCodeBtnDidTouch:" destination="d1d-0t-P1k" eventType="touchUpInside" id="k35-Nw-ucb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="05V-Gv-u84" firstAttribute="trailing" secondItem="yyS-Mt-US2" secondAttribute="trailing" constant="16" id="1sV-5h-QHa"/>
+                            <constraint firstItem="yyS-Mt-US2" firstAttribute="leading" secondItem="05V-Gv-u84" secondAttribute="leading" constant="16" id="2vp-r8-o4M"/>
+                            <constraint firstItem="fMd-BO-aWD" firstAttribute="centerX" secondItem="53r-Gh-Ygi" secondAttribute="centerX" id="4LS-P5-7rB"/>
+                            <constraint firstItem="qIl-Mg-UX8" firstAttribute="centerX" secondItem="05V-Gv-u84" secondAttribute="centerX" id="5vB-Qp-JOh"/>
+                            <constraint firstItem="53r-Gh-Ygi" firstAttribute="centerX" secondItem="yyS-Mt-US2" secondAttribute="centerX" id="8Tr-tp-cdQ"/>
+                            <constraint firstItem="qIl-Mg-UX8" firstAttribute="centerY" secondItem="05V-Gv-u84" secondAttribute="centerY" multiplier="0.5" id="MBR-9Q-6oW"/>
+                            <constraint firstItem="53r-Gh-Ygi" firstAttribute="top" secondItem="yyS-Mt-US2" secondAttribute="bottom" constant="20" id="VRE-v0-F0E"/>
+                            <constraint firstItem="yyS-Mt-US2" firstAttribute="top" secondItem="qIl-Mg-UX8" secondAttribute="bottom" constant="30" id="g19-nI-JAh"/>
+                            <constraint firstItem="qIl-Mg-UX8" firstAttribute="width" secondItem="hes-6w-oWY" secondAttribute="width" multiplier="0.5" id="k7w-7o-lYA"/>
+                            <constraint firstItem="fMd-BO-aWD" firstAttribute="top" secondItem="53r-Gh-Ygi" secondAttribute="bottom" constant="20" id="zxJ-RI-fWi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="05V-Gv-u84"/>
+                    </view>
+                    <connections>
+                        <outlet property="qrCodeImageView" destination="qIl-Mg-UX8" id="DHU-LN-KCg"/>
+                        <outlet property="submitButtonProvider" destination="53r-Gh-Ygi" id="MRo-RV-urN"/>
+                        <outlet property="textToQrField" destination="yyS-Mt-US2" id="ZCm-kj-7GQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nzr-X1-Sp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-181" y="138"/>
+        </scene>
+    </scenes>
+</document>
